@@ -1,0 +1,16 @@
+# Website update
+- [x] Replace fictional Meridian content with Diversal company details.
+- [x] Source and use verified images of the six requested developments; label the Margalla Enclave access-road photograph precisely.
+- [x] Add home, projects, project details, services, company and contact pages.
+- [x] Verify desktop/mobile navigation, image loading, project filters and WhatsApp enquiry composition.
+- [x] Restore mobile scroll animations across all pages.
+- [x] Improve development-focused project descriptions without unverified builder claims.
+- [x] Fix and verify desktop WhatsApp links and enquiry submission.
+- [x] Restore mobile background video playback and verify visibility.
+- [x] Add the six supplied homes as under-construction projects with individual pages.
+- [x] Sharpen supplied reference images without changing the pictured homes.
+- [x] Clarify construction-location pages and enquiries; do not offer pictured houses for sale.
+- [x] Keep footer text visible and verify project navigation and background film.
+- [ ] Add basic company, CEO and pre-booking FAQs before the footer.
+- [ ] Make footer contact and office text readable above the background film.
+- [ ] Give each construction project a distinct description and pre-booking enquiries.
