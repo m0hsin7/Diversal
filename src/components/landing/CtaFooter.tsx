@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Brand } from "@/components/site/Brand";
-import { Reveal } from "./Reveal";
 import { company, services } from "@/lib/company";
 import { waHref, waClick } from "@/lib/whatsapp";
+
 
 const navLinks = [
   { to: "/projects" as const, label: "Projects" },
@@ -23,84 +23,78 @@ export function CtaFooter() {
     >
       {/* ── Top invitation band ───────────────────────────────────────── */}
       <div className="site-container">
-        <Reveal>
-          <p className="eyebrow">Your next address starts here</p>
-        </Reveal>
+        <p className="eyebrow">Your next address starts here</p>
 
-        <Reveal delay={80}>
-          <div className="footer-invitation">
-            <h2>
-              Let's find
-              <br />
-              your place.
-            </h2>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "16px",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "13px",
-                  lineHeight: 1.85,
-                  color: "var(--brand-soft)",
-                  maxWidth: "38ch",
-                }}
-              >
-                Six projects across the Islamabad region. Meet us at either office, or start with a call.
-              </p>
-              <Button asChild variant="outline" className="site-cta">
-                <Link to="/contact">Start a conversation ↗</Link>
-              </Button>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* ── Divider with tagline ──────────────────────────────────────── */}
-        <Reveal delay={120}>
+        <div className="footer-invitation">
+          <h2>
+            Let's find
+            <br />
+            your place.
+          </h2>
           <div
             style={{
               display: "flex",
-              alignItems: "center",
-              gap: "24px",
-              marginTop: "64px",
-              marginBottom: "0",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "16px",
             }}
           >
-            <div
+            <p
               style={{
-                flex: 1,
-                height: "1px",
-                background:
-                  "color-mix(in oklab, var(--brand-light) 15%, transparent)",
-              }}
-              aria-hidden="true"
-            />
-            <span
-              style={{
-                fontSize: "9px",
-                letterSpacing: "0.26em",
-                textTransform: "uppercase",
+                fontSize: "13px",
+                lineHeight: 1.85,
                 color: "var(--brand-soft)",
-                whiteSpace: "nowrap",
+                maxWidth: "38ch",
               }}
             >
-              Diversal · Live Better
-            </span>
-            <div
-              style={{
-                flex: 1,
-                height: "1px",
-                background:
-                  "color-mix(in oklab, var(--brand-light) 15%, transparent)",
-              }}
-              aria-hidden="true"
-            />
+              Six projects across the Islamabad region. Meet us at either office, or start with a call.
+            </p>
+            <Button asChild variant="outline" className="site-cta">
+              <Link to="/contact">Start a conversation ↗</Link>
+            </Button>
           </div>
-        </Reveal>
+        </div>
+
+        {/* ── Divider with tagline ──────────────────────────────────────── */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "24px",
+            marginTop: "64px",
+            marginBottom: "0",
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+              height: "1px",
+              background:
+                "color-mix(in oklab, var(--brand-light) 15%, transparent)",
+            }}
+            aria-hidden="true"
+          />
+          <span
+            style={{
+              fontSize: "9px",
+              letterSpacing: "0.26em",
+              textTransform: "uppercase",
+              color: "var(--brand-soft)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Diversal · Live Better
+          </span>
+          <div
+            style={{
+              flex: 1,
+              height: "1px",
+              background:
+                "color-mix(in oklab, var(--brand-light) 15%, transparent)",
+            }}
+            aria-hidden="true"
+          />
+        </div>
 
         {/* ── Main footer grid ─────────────────────────────────────────── */}
         <div className="footer-grid">
