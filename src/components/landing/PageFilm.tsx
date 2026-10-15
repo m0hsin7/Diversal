@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
-import cityFilm from "@/assets/diversal-film-mobile.mp4.asset.json";
-import webFilm from "@/assets/diversal-film.webm.asset.json";
+import webFilm from "@/assets/diversal-film.webm";
 import heroPoster from "@/assets/hero-poster.jpg";
 import { useIsMobile, usePrefersReducedMotion } from "@/hooks/use-motion";
 
@@ -48,28 +47,32 @@ export function PageFilm() {
     const video = videoRef.current;
     if (!video || reduced) return;
     const resume = () => {
-      if (document.visibilityState !== 'visible') return;
+      if (document.visibilityState !== "visible") return;
       video.muted = true;
-      if (video.paused) void video.play().catch(() => { /* Poster remains visible when device autoplay is restricted. */ });
+      if (video.paused) {
+        void video.play().catch(() => {
+          /* Poster remains visible when device autoplay is restricted. */
+        });
+      }
     };
     resume();
-    video.addEventListener('canplay', resume);
-    document.addEventListener('visibilitychange', resume);
-    window.addEventListener('pageshow', resume);
-    window.addEventListener('touchstart', resume, { passive: true });
-    window.addEventListener('pointerdown', resume, { passive: true });
+    video.addEventListener("canplay", resume);
+    document.addEventListener("visibilitychange", resume);
+    window.addEventListener("pageshow", resume);
+    window.addEventListener("touchstart", resume, { passive: true });
+    window.addEventListener("pointerdown", resume, { passive: true });
     return () => {
-      video.removeEventListener('canplay', resume);
-      document.removeEventListener('visibilitychange', resume);
-      window.removeEventListener('pageshow', resume);
-      window.removeEventListener('touchstart', resume);
-      window.removeEventListener('pointerdown', resume);
+      video.removeEventListener("canplay", resume);
+      document.removeEventListener("visibilitychange", resume);
+      window.removeEventListener("pageshow", resume);
+      window.removeEventListener("touchstart", resume);
+      window.removeEventListener("pointerdown", resume);
     };
   }, [reduced]);
 
   return (
     <div ref={frameRef} className="page-film" aria-hidden="true">
-      <img src={heroPoster} alt="" className="page-film-media" />
+      <img src={heroPoster} alt="" className="page-film-media" style={{ zIndex: 1 }} />
       {!reduced && (
         <video
           ref={videoRef}
@@ -80,12 +83,13 @@ export function PageFilm() {
           loop
           playsInline
           preload="auto"
+          style={{ zIndex: 2 }}
         >
-          <source src={webFilm.url} type="video/webm" />
-          <source src={cityFilm.url} type="video/mp4" />
+          <source src={webFilm} type="video/webm" />
+          <source src="/diversal-film.webm" type="video/webm" />
         </video>
       )}
-      <div className="page-film-grade" />
+      <div className="page-film-grade" style={{ zIndex: 3 }} />
     </div>
   );
 }
