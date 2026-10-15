@@ -1,17 +1,17 @@
-import modern from '@/assets/homes/modern-residence-enhanced.jpg.asset.json';
-import residence334 from '@/assets/homes/residence-334-enhanced.jpg.asset.json';
-import vista from '@/assets/homes/the-vista-enhanced.jpg.asset.json';
-import residence999 from '@/assets/homes/residence-999-enhanced.jpg.asset.json';
-import topCity from '@/assets/homes/residence-top-city-enhanced.jpg.asset.json';
-import faisalTown from '@/assets/homes/residence-faisal-town-enhanced.jpg.asset.json';
+import modern from '@/assets/homes/modern-residence-enhanced.jpg';
+import residence334 from '@/assets/homes/residence-334-enhanced.jpg';
+import vista from '@/assets/homes/the-vista-enhanced.jpg';
+import residence999 from '@/assets/homes/residence-999-enhanced.jpg';
+import topCity from '@/assets/homes/residence-top-city-enhanced.jpg';
+import faisalTown from '@/assets/homes/residence-faisal-town-enhanced.jpg';
 
 export const homes = [
-  { slug: 'modern-residence', name: 'Modern Residence', area: 'Top City, Islamabad', image: modern.url, design: 'A contemporary exterior with layered volumes, patterned screens and a sheltered entrance.' },
-  { slug: 'residence-334', name: 'Residence 334', area: 'Top City, Islamabad', image: residence334.url, design: 'Clean horizontal lines, contrasting façade panels and a wide gated frontage define the supplied exterior.' },
-  { slug: 'the-vista', name: 'The Vista', area: 'Top City, Islamabad', image: vista.url, design: 'A bold framed façade pairs broad glazing with a recessed balcony and an illuminated entrance.' },
-  { slug: 'residence-999', name: 'Residence 999', area: 'Top City, Islamabad', image: residence999.url, design: 'Stone-textured accents, open balcony framing and a paved approach give this home a distinctive street presence.' },
-  { slug: 'residence-top-city', name: 'Residence — Top City', area: 'Top City, Islamabad', image: topCity.url, design: 'A contrasting upper-storey frame and patterned feature wall sit above a shaded ground-floor entrance.' },
-  { slug: 'residence-faisal-town', name: 'Residence — Faisal Town', area: 'Faisal Town, Islamabad', image: faisalTown.url, design: 'A light multi-level exterior is balanced by a vertical stone-clad feature and balcony railings.' },
+  { slug: 'modern-residence', name: 'Modern Residence', area: 'Top City, Islamabad', image: modern, design: 'A contemporary exterior with layered volumes, patterned screens and a sheltered entrance.' },
+  { slug: 'residence-334', name: 'Residence 334', area: 'Top City, Islamabad', image: residence334, design: 'Clean horizontal lines, contrasting façade panels and a wide gated frontage define the supplied exterior.' },
+  { slug: 'the-vista', name: 'The Vista', area: 'Top City, Islamabad', image: vista, design: 'A bold framed façade pairs broad glazing with a recessed balcony and an illuminated entrance.' },
+  { slug: 'residence-999', name: 'Residence 999', area: 'Top City, Islamabad', image: residence999, design: 'Stone-textured accents, open balcony framing and a paved approach give this home a distinctive street presence.' },
+  { slug: 'residence-top-city', name: 'Residence — Top City', area: 'Top City, Islamabad', image: topCity, design: 'A contrasting upper-storey frame and patterned feature wall sit above a shaded ground-floor entrance.' },
+  { slug: 'residence-faisal-town', name: 'Residence — Faisal Town', area: 'Faisal Town, Islamabad', image: faisalTown, design: 'A light multi-level exterior is balanced by a vertical stone-clad feature and balcony railings.' },
 ].map(home => ({
   ...home,
   status: 'Under construction' as const,

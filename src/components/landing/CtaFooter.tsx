@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Brand } from "@/components/site/Brand";
 import { company, services } from "@/lib/company";
 import { waHref, waClick } from "@/lib/whatsapp";
+import ceoPhoto from "@/assets/malik-waqar-ahmed.jpg";
 
 
 const navLinks = [
@@ -300,34 +301,71 @@ export function CtaFooter() {
                 className="eyebrow"
                 style={{ color: "var(--brand-soft)" }}
               >
-                A direct conversation
+                Leadership
               </p>
-              <p
+              <div
                 style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "18px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "14px",
                   marginTop: "12px",
-                  color: "var(--brand-light)",
-                  fontWeight: 500,
                 }}
               >
-                {company.ceo}
-              </p>
+                <img
+                  src={ceoPhoto}
+                  alt={`${company.ceo} — Chief Executive Officer`}
+                  style={{
+                    width: "56px",
+                    height: "56px",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: "2px solid var(--signal)",
+                    flexShrink: 0,
+                  }}
+                />
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "17px",
+                      color: "var(--brand-light)",
+                      fontWeight: 600,
+                      lineHeight: 1.2,
+                      margin: 0,
+                    }}
+                  >
+                    {company.ceo}
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "10px",
+                      color: "var(--signal)",
+                      marginTop: "3px",
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      fontWeight: 600,
+                    }}
+                  >
+                    CEO &amp; Visionary Leader
+                  </p>
+                </div>
+              </div>
               <p
                 style={{
                   fontSize: "11px",
+                  lineHeight: 1.65,
                   color: "var(--brand-soft)",
-                  marginTop: "4px",
+                  marginTop: "12px",
                 }}
               >
-                Chief Executive Officer
+                Guiding Diversal with unwavering integrity, foresight, and client-first excellence across Islamabad.
               </p>
               <a
                 href="tel:+923325178767"
                 style={{
                   display: "inline-block",
                   fontSize: "12px",
-                  marginTop: "12px",
+                  marginTop: "10px",
                   color: "var(--signal)",
                   textDecoration: "none",
                   letterSpacing: "0.03em",

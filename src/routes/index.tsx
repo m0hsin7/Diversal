@@ -6,6 +6,7 @@ import { Faq } from '@/components/landing/Faq';
 import { ProjectGrid } from '@/components/site/ProjectGrid';
 import { HomeProjectGrid } from '@/components/site/HomeProjectGrid';
 import { company, services, pageHead } from '@/lib/company';
+import ceoPhoto from '@/assets/malik-waqar-ahmed.jpg';
 
 export const Route = createFileRoute('/')({
   head: () =>
@@ -92,8 +93,20 @@ function Home() {
             </Reveal>
             <Reveal delay={100}>
               <p className="eyebrow">A direct conversation</p>
-              <h3>{company.ceo}</h3>
-              <p>Chief Executive Officer</p>
+              <div className="ceo-card-inline">
+                <img
+                  src={ceoPhoto}
+                  alt={`${company.ceo} — Chief Executive Officer`}
+                  className="ceo-avatar"
+                />
+                <div>
+                  <h3 className="ceo-name">{company.ceo}</h3>
+                  <p className="ceo-tag">Chief Executive Officer &amp; Visionary Leader</p>
+                </div>
+              </div>
+              <p className="ceo-bio">
+                A distinguished leader with deep roots in Islamabad’s real estate development. Renowned for transparent guidance, client-first integrity, and visionary leadership across Faisal Town, Multi Gardens, and prime capital projects.
+              </p>
               <a href="tel:+923325178767" className="contact-link">{company.phones[0]}</a>
             </Reveal>
           </section>
